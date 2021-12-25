@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Montserrat:wght@300;500;600;700&family=Varta:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Healthyeats</title>
+</head>
+<body>
+    <svg style="display: none">
+        <symbol id="facebook" viewBox="0 0 50 50">
+            <g>
+                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z 
+                M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"/>
+            </g>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <g>
+                <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 
+                16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 
+                17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 
+                A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 
+                12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 
+                13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"/>
+            </g>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 310 310">
+            <g id="XMLID_826_">
+                <path d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73
+                    c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783
+                    c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598
+                    C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467
+                    c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977
+                    c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889
+                    c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597
+                    c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961
+                    c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895
+                    c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367
+                    c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998
+                    C307.394,57.037,305.009,56.486,302.973,57.388z"/>
+            </g>
+        </symbol>
+        <symbol id="phone" viewBox="0 0 24 24">
+            <g>
+                <path d="M6.176 1.322l2.844-1.322 4.041 7.89-2.724 1.341c-.538 1.259 2.159 6.289 3.297 6.372.09-.058 
+                2.671-1.328 2.671-1.328l4.11 7.932s-2.764 1.354-2.854 1.396c-7.862 3.591-19.103-18.258-11.385-22.281zm1.929 
+                1.274l-1.023.504c-5.294 2.762 4.177 21.185 9.648 18.686l.971-.474-2.271-4.383-1.026.5c-3.163 
+                1.547-8.262-8.219-5.055-9.938l1.007-.497-2.251-4.398z"/>
+            </g>
+        </symbol>
+        <symbol id="clock" viewBox="0 0 24 24">
+            <g>
+                <path d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 
+                22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 
+                20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 11 6 L 11 12.414062 L 15.292969 
+                16.707031 L 16.707031 15.292969 L 13 11.585938 L 13 6 L 11 6 z"/>
+            </g>
+        </symbol>
+    </svg>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img class="logo_img" src="img/healthyeats-logo.png" alt="">
+                    <h1 class="logo_title">healthyeats</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav__link">About</a>
+                    <a href="#" class="nav__link">Menu</a>
+                    <a href="#" class="nav__link">Delivery</a>
+                    <a href="#" class="nav__link">FAQ</a>
+                    <a href="#" class="nav__link">Contacts</a>
+                </nav>
+                <div class="header__contact">
+                    <img class="header__contact_img" src="img/contact.png" alt="" class="contact-img">
+                    <h1 class="header__contact_title">8 000 00 00</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="spec-recipe">
+            <div class="spec-recipe_inner">
+                <h1 class="spec-recipe__title">
+                    Poke bowl
+                </h1>
+                <div class="characteristic">
+                    <div class="characteristic__item">
+                        <h4 class="characteristic__title">Calories</h4>
+                        <p class="characteristic__text">300 kcal</p>
+                    </div>
+                    <div class="characteristic__item">
+                        <h4 class="characteristic__title">Fats</h4>
+                        <p class="characteristic__text">13g</p>
+                    </div>
+                    <div class="characteristic__item">
+                        <h4 class="characteristic__title">Protein</h4>
+                        <p class="characteristic__text">20g</p>
+                    </div>
+                </div>
+                <h2 class="spec-recipe__subtitle">
+                    Healthy protein infused with 
+                    Japanese inspired flavors for a 
+                    delicious gourmet meal.
+                </h2>
+                <a class="spec-recipe__button" href="#">
+                    <span class="spec-recipe__button__left">15 $</span>
+                    <span class="spec-recipe__button__right">Buy Now</span>
+                </a>
+            </div>
+            <div class="ellipse1">
+                <img src="img/PokeBowl.png" alt="">
+            </div>
+            <div class="ellipse2"></div>
+            <div class="ellipse3"></div>
+            <div class="ellipse4"></div>
+            <div class="spec-recipe_right-element">
+                <div class="spec-recipe_right-element__title">
+                    Special recipe
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about_inner">
+                <img class="about_img" src="img/about.png" alt="">
+                <div class="about_text">
+                    <h1 class="about_text__title">
+                        About our company
+                    </h1>
+                    <h2 class="about_text__subtitle1">
+                        We want to show you, that healthy food can be tasty. 
+                    </h2>
+                    <h2 class="about_text__subtitle2">
+                        And of course we help you to save your time from grocery and cooking.
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="ration">
+            <div class="ration_bar">
+                <h1 class="ration_bar__title">Choose a ration for yourself</h1>
+                <a class="ration_bar__button_item" href="#">
+                    <div class="button_item__text">Sex</div>
+                </a>
+                <a class="ration_bar__button_item" href="#">
+                    <div class="button_item__text">Size</div>
+                </a>
+                <a class="ration_bar__button_item" href="#">
+                    <div class="button_item__text">Type</div>
+                </a>
+            </div>
+            <div class="ration_inner">
+                <div class="ratio_inner__item">
+                    <h1 class="ration_inner__item-text">Breakfast</h1>
+                    <img class="ration_inner__item-img" src="img/breakfast.png" alt="">
+                </div>
+                <div class="ratio_inner__item">
+                    <h1 class="ration_inner__item-text">Lunch</h1>
+                    <img class="ration_inner__item-img" src="img/lunch.png" alt="">
+                </div>
+                <div class="ratio_inner__item">
+                    <h1 class="ration_inner__item-text">Dinner</h1>
+                    <img class="ration_inner__item-img" src="img/dinner.png" alt="">
+                </div>
+                <div class="ratio_inner__item">
+                    <h1 class="ration_inner__item-text">Snack</h1>
+                    <img class="ration_inner__item-img" src="img/snack.png" alt="">
+                </div>
+                <div class="ratio_inner__item">
+                    <h1 class="ration_inner__item-text">Drinks</h1>
+                    <img class="ration_inner__item-img" src="img/drinks.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-container">
+                <div class="menu-card-wrapper">
+                    <div class="cards">
+                        <div class="card">
+                            <img class="card-img" src="img/avocado.jpg" alt="forest">
+                            <h3 class="card-title">Poached eggs with smashed avocado & tomatoes</h3>
+                            <div class="characteristic">
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Calories</h4>
+                                    <p class="card-characteristic__text">300 kcal</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Fats</h4>
+                                    <p class="card-characteristic__text">13g</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Protein</h4>
+                                    <p class="card-characteristic__text">20g</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <img class="card-img" src="img/turkey-piccata.jpg" alt="forest">
+                            <h3 class="card-title">Turkey piccata<br></h3>
+                            <div class="characteristic">
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Calories</h4>
+                                    <p class="card-characteristic__text">300 kcal</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Fats</h4>
+                                    <p class="card-characteristic__text">13g</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Protein</h4>
+                                    <p class="card-characteristic__text">20g</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card">
+                            <img class="card-img" src="img/spinach-sweet-potato.jpg" alt="forest">
+                            <h3 class="card-title">Spinach, sweet potato with lentil dhal</h3>
+                            <div class="characteristic">
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Calories</h4>
+                                    <p class="card-characteristic__text">300 kcal</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Fats</h4>
+                                    <p class="card-characteristic__text">13g</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Protein</h4>
+                                    <p class="card-characteristic__text">20g</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cards">
+                        <div class="card">
+                            <img class="card-img" src="img/greek-style-roast-fish.jpg" alt="forest">
+                            <h3 class="card-title">Greek style roast fish</h3>
+                            <div class="characteristic">
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Calories</h4>
+                                    <p class="card-characteristic__text">300 kcal</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Fats</h4>
+                                    <p class="card-characteristic__text">13g</p>
+                                </div>
+                                <div class="characteristic__item">
+                                    <h4 class="card-characteristic__title">Protein</h4>
+                                    <p class="card-characteristic__text">20g</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work">
+            <div class="work-container">
+                <h1 class="work_title">How it works</h1>
+                <div class="work_inner">
+                    <div class="choose">
+                        <img class="choose_img" src="img/choose.png" alt="">
+                        <div class="choose_text">
+                            <h1 class="choose_text__title">Choose</h1>
+                            <div class="choose_text__subtitle">Our dietian will help you with choosing!</div>
+                        </div>
+                    </div>
+                    <div class="preparing">
+                        <div class="preparing_text">
+                            <h1 class="preparing_text__title">Preparing</h1>
+                            <div class="preparing_text__subtitle">
+                                We prepare food from fresh 
+                                and proven products 
+                                according to the menu 
+                                developed by the chef special 
+                                for you.</div>
+                        </div>
+                        <img class="preparing_img" src="img/preparing.png" alt="">
+                    </div>
+                    <div class="delivery">
+                        <img class="delivery_img" src="img/delivery.png" alt="">
+                        <div class="deliver_text">
+                            <h1 class="choose_text__title">Delivery</h1>
+                            <div class="choose_text__subtitle">
+                                Our courier will deliver 
+                                your 5 times daily diet 
+                                everyday!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video">
+            <div class="video_inner">
+                <h1 class="video_title">You can watch cooking process translation!</h1>
+                <a href="#" class="video_button">Play Video</a>
+            </div>
+            <div class="video_block">
+                <div class="video_block__img"><img src="img/video.jpg" alt="" >
+                    <div class="video_block__button"><img src="img/video_button.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="consultation">
+            <div class="consultation-container">
+                <h1 class="consultation_title">Questions?</h1>
+                <div class="consultation_inner">
+                    <div class="consultation-search">
+                        <input type="text" class="consultation-search-input" placeholder="Email">
+                        <button class="consultation-search-button" type="submit">Send</button>
+                    </div>
+                    <h2 class="consultation_inner__text">
+                        If you have questions, plese fill out the form and we will call you back!
+                    </h2>
+                </div>
+                <h1 class="consultation_second-title">
+                    Need a free consultation?
+                </h1>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-head">
+            <div class="footer__logo">
+                <img class="logo_img" src="img/healthyeats-logo.png" alt="">
+                <h1 class="logo_title">healthyeats</h1>
+            </div>
+            <div class="social">
+                <a href="#" class="social__item">
+                    <svg class="social__icon">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__item">
+                    <svg class="social__icon">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+                <a href="#" class="social__item">
+                    <svg class="social__icon">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-inner">
+            <div class="sitemap">
+                <h1 class="sitemap_title">Sitemap</h1>
+                <ul class="sitemap-list sitemap-list_left">
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">Main</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">About us</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">News</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">Menu</a>
+                    </li>
+                </ul>
+                <ul class="sitemap-list sitemap-list_right">
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">FAQ</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">Contacts</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">Privacy</a>
+                    </li>
+                    <li class="sitemap-list__item">
+                        <a class="sitemap-list__link" href="#">Terms</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h1 class="contact_title">Contact us</h1>
+                <div class="contact_number">
+                    <svg class="contact__icon">
+                        <use xlink:href="#phone"></use>
+                    </svg>
+                    <h1 class="contact_text">8 000 00 00</h1>
+                </div>
+                <div class="work_time">
+                    <svg class="work_time__icon">
+                        <use xlink:href="#clock"></use>
+                    </svg>
+                    <div class="work_times">
+                        <div class="work_time__day-of-week">Monday - Friday</div>
+                        <div class="work_time__hour">9 a.m - 6 p.m</div>
+                        <div class="work_time__day-of-week">Saturday</div>
+                        <div class="work_time__hour">10 a.m - 4 p.m</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <hr class="line">
+            <div class="footer-copyright_text">
+                2021 Healthy food delivery template by sallystx
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+</html>
