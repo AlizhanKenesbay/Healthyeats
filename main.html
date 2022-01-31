@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="assets/main-style.css">
+    <link rel="stylesheet" href="assets/pace-theme-default.min.css">
+    <link rel="shortcut icon" href="assets/img/main/healthyeats-logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&family=Montserrat:wght@300;500;600;700&family=Varta:wght@300;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <title>Healthyeats</title>
 </head>
 <body>
@@ -60,24 +63,50 @@
         </symbol>
     </svg>
 
-    <header class="header">
+    <!-- <header class="header">
         <div class="container">
             <div class="header__inner">
-                <div class="header__logo">
-                    <img class="logo_img" src="img/healthyeats-logo.png" alt="">
+                <a href="./main.html" class="header__logo transition">
+                    <img class="logo_img" src="assets/img/main/healthyeats-logo.png" alt="">
                     <h1 class="logo_title">healthyeats</h1>
-                </div>
+                </a>
                 <nav class="nav">
-                    <a href="#" class="nav__link">About</a>
-                    <a href="#" class="nav__link">Menu</a>
-                    <a href="#" class="nav__link">Delivery</a>
-                    <a href="#" class="nav__link">FAQ</a>
-                    <a href="#" class="nav__link">Contacts</a>
+                    <a href="./about.html" class="nav__link transition">About</a>
+                    <a href="./menu.html" class="nav__link transition">Menu</a>
+                    <a href="./delivery.html" class="nav__link transition">Delivery</a>
+                    <a href="./FAQ.html" class="nav__link transition">FAQ</a>
+                    <a href="./contacts.html" class="nav__link transition">Contacts</a>
                 </nav>
-                <div class="header__contact">
-                    <img class="header__contact_img" src="img/contact.png" alt="" class="contact-img">
+                <a class="header__contact" href="tel:+80000000">
+                    <img class="header__contact_img" src="assets/img/main/contact.png" alt="" class="contact-img">
                     <h1 class="header__contact_title">8 000 00 00</h1>
-                </div>
+                </a>
+            </div>
+        </div>
+    </header> -->
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="./main.html" class="header__logo transition">
+                    <img class="logo_img" src="assets/img/main/healthyeats-logo.png" alt="">
+                    <h1 class="logo_title">healthyeats</h1>
+                </a>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="header-menu">
+                    <li><a href="./about.html" class="nav__link transition">About</a></li>
+                    <li><a href="./menu.html" class="nav__link transition">Menu</a></li>
+                    <li><a href="./delivery.html" class="nav__link transition">Delivery</a></li>
+                    <li><a href="./FAQ.html" class="nav__link transition">FAQ</a></li>
+                    <li><a href="./contacts.html" class="nav__link transition">Contacts</a></li>
+                </ul>
+                <a class="header__contact" href="tel:+80000000">
+                    <img class="header__contact_img" src="assets/img/main/contact.png" alt="" class="contact-img">
+                    <h1 class="header__contact_title">8 000 00 00</h1>
+                </a>
             </div>
         </div>
     </header>
@@ -107,17 +136,19 @@
                     Japanese inspired flavors for a 
                     delicious gourmet meal.
                 </h2>
-                <a class="spec-recipe__button" href="#">
+                <a class="spec-recipe__button transition" href="#">
                     <span class="spec-recipe__button__left">15 $</span>
                     <span class="spec-recipe__button__right">Buy Now</span>
                 </a>
             </div>
-            <div class="ellipse1">
-                <img src="img/PokeBowl.png" alt="">
+            <div class="circles">
+                <div class="ellipse1">
+                    <img src="assets/img/main/PokeBowl.png" alt="">
+                </div>
+                <div class="ellipse2"></div>
+                <div class="ellipse3"></div>
+                <div class="ellipse4"></div>
             </div>
-            <div class="ellipse2"></div>
-            <div class="ellipse3"></div>
-            <div class="ellipse4"></div>
             <div class="spec-recipe_right-element">
                 <div class="spec-recipe_right-element__title">
                     Special recipe
@@ -126,55 +157,57 @@
         </div>
 
         <div class="about">
-            <div class="about_inner">
-                <img class="about_img" src="img/about.png" alt="">
-                <div class="about_text">
-                    <h1 class="about_text__title">
-                        About our company
-                    </h1>
-                    <h2 class="about_text__subtitle1">
+            <img class="about_img" src="assets/img/main/about.png" alt="">
+            <div class="about_text">
+                <h1 class="about_text__title">
+                    About our company
+                </h1>
+                <div class="about_text__subtitles">
+                    <h2 class="about_text__subtitle">
                         We want to show you, that healthy food can be tasty. 
                     </h2>
-                    <h2 class="about_text__subtitle2">
+                    <h2 class="about_text__subtitle">
                         And of course we help you to save your time from grocery and cooking.
                     </h2>
-                </div>
+                </div> 
             </div>
         </div>
 
         <div class="ration">
             <div class="ration_bar">
                 <h1 class="ration_bar__title">Choose a ration for yourself</h1>
-                <a class="ration_bar__button_item" href="#">
-                    <div class="button_item__text">Sex</div>
-                </a>
-                <a class="ration_bar__button_item" href="#">
-                    <div class="button_item__text">Size</div>
-                </a>
-                <a class="ration_bar__button_item" href="#">
-                    <div class="button_item__text">Type</div>
-                </a>
+                <div class="ration_bar__buttons">
+                    <a class="ration_bar__button_item" href="#">
+                        <div class="button_item__text">Sex</div>
+                    </a>
+                    <a class="ration_bar__button_item" href="#">
+                        <div class="button_item__text">Size</div>
+                    </a>
+                    <a class="ration_bar__button_item" href="#">
+                        <div class="button_item__text">Type</div>
+                    </a>
+                </div>
             </div>
             <div class="ration_inner">
                 <div class="ratio_inner__item">
                     <h1 class="ration_inner__item-text">Breakfast</h1>
-                    <img class="ration_inner__item-img" src="img/breakfast.png" alt="">
+                    <img class="ration_inner__item-img" src="assets/img/main/breakfast.png" alt="">
                 </div>
                 <div class="ratio_inner__item">
                     <h1 class="ration_inner__item-text">Lunch</h1>
-                    <img class="ration_inner__item-img" src="img/lunch.png" alt="">
+                    <img class="ration_inner__item-img" src="assets/img/main/lunch.png" alt="">
                 </div>
                 <div class="ratio_inner__item">
                     <h1 class="ration_inner__item-text">Dinner</h1>
-                    <img class="ration_inner__item-img" src="img/dinner.png" alt="">
+                    <img class="ration_inner__item-img" src="assets/img/main/dinner.png" alt="">
                 </div>
                 <div class="ratio_inner__item">
                     <h1 class="ration_inner__item-text">Snack</h1>
-                    <img class="ration_inner__item-img" src="img/snack.png" alt="">
+                    <img class="ration_inner__item-img" src="assets/img/main/snack.png" alt="">
                 </div>
                 <div class="ratio_inner__item">
                     <h1 class="ration_inner__item-text">Drinks</h1>
-                    <img class="ration_inner__item-img" src="img/drinks.png" alt="">
+                    <img class="ration_inner__item-img" src="assets/img/main/drinks.png" alt="">
                 </div>
             </div>
         </div>
@@ -182,99 +215,147 @@
         <div class="menu">
             <div class="menu-container">
                 <div class="menu-card-wrapper">
-                    <div class="cards">
-                        <div class="card">
-                            <img class="card-img" src="img/avocado.jpg" alt="forest">
-                            <h3 class="card-title">Poached eggs with smashed avocado & tomatoes</h3>
-                            <div class="characteristic">
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Calories</h4>
-                                    <p class="card-characteristic__text">300 kcal</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Fats</h4>
-                                    <p class="card-characteristic__text">13g</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Protein</h4>
-                                    <p class="card-characteristic__text">20g</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <div class="card">
-                            <img class="card-img" src="img/turkey-piccata.jpg" alt="forest">
-                            <h3 class="card-title">Turkey piccata<br></h3>
-                            <div class="characteristic">
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Calories</h4>
-                                    <p class="card-characteristic__text">300 kcal</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Fats</h4>
-                                    <p class="card-characteristic__text">13g</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Protein</h4>
-                                    <p class="card-characteristic__text">20g</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <div class="card">
-                            <img class="card-img" src="img/spinach-sweet-potato.jpg" alt="forest">
-                            <h3 class="card-title">Spinach, sweet potato with lentil dhal</h3>
-                            <div class="characteristic">
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Calories</h4>
-                                    <p class="card-characteristic__text">300 kcal</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Fats</h4>
-                                    <p class="card-characteristic__text">13g</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Protein</h4>
-                                    <p class="card-characteristic__text">20g</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cards">
-                        <div class="card">
-                            <img class="card-img" src="img/greek-style-roast-fish.jpg" alt="forest">
-                            <h3 class="card-title">Greek style roast fish</h3>
-                            <div class="characteristic">
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Calories</h4>
-                                    <p class="card-characteristic__text">300 kcal</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Fats</h4>
-                                    <p class="card-characteristic__text">13g</p>
-                                </div>
-                                <div class="characteristic__item">
-                                    <h4 class="card-characteristic__title">Protein</h4>
-                                    <p class="card-characteristic__text">20g</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+					<label class="card-label">
+						<input type="checkbox" class="card-input"/>
+						<div class="flip-card">
+							<div class="front">
+								<div class="card-img">
+									<img src="assets/img/main/avocado.jpg" alt="" />
+								</div>
+								<h3>Poached eggs with smashed avocado & tomatoes</h3>
+								<div class="front-characteristic">
+									<div class="front-characteristic__item">
+										<h4>Calories</h4>
+										<p>300 kcal</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Fats</h4>
+										<p>13g</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Protein</h4>
+										<p>20g</p>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<h1>Poached eggs with smashed avocado & tomatoes</h1>
+								<hr />
+								<p>Keep yourself full until lunchtime with this healthy breakfast 
+                                    boost. Delicious avocado serves as a butter alternative and 
+                                    goes well with a runny poached egg</p>
+								<hr />
+							</div>
+						</div>
+					</label>
+					<label class="card-label">
+						<input type="checkbox" class="card-input"/>
+						<div class="flip-card">
+							<div class="front">
+								<div class="card-img">
+									<img src="assets/img/main/turkey-piccata.jpg" alt="" />
+								</div>
+								<h3>Turkey piccata</h3>
+								<div class="front-characteristic">
+									<div class="front-characteristic__item">
+										<h4>Calories</h4>
+										<p>400 kcal</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Fats</h4>
+										<p>10g</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Protein</h4>
+										<p>41g</p>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<h1>Turkey piccata</h1>
+								<hr />
+								<p>A healthier version of piccata veal, that's gluten free and 
+                                    dairy-free, cooked in a lemon butter sauce and served with 
+                                    crisp baby roast potatoes</p>
+								<hr />
+							</div>
+						</div>
+					</label>
+					<label class="card-label">
+						<input type="checkbox" class="card-input"/>
+						<div class="flip-card">
+							<div class="front">
+								<div class="card-img">
+									<img src="assets/img/main/spinach-sweet-potato.jpg" alt="" />
+								</div>
+								<h3>Spinach, sweet potato with lentil dhal</h3>
+								<div class="front-characteristic">
+									<div class="front-characteristic__item">
+										<h4>Calories</h4>
+										<p>425 kcal</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Fats</h4>
+										<p>19g</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Protein</h4>
+										<p>45g</p>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<h1>Spinach, sweet potato with lentil dhal</h1>
+								<hr />
+								<p>A comforting vegan one-pot recipe that counts for 3 of your 
+                                    5-a-day! You can't go wrong with this iron-rich, low-fat, 
+                                    low-calorie supper.</p>
+								<hr />
+							</div>
+						</div>
+					</label>
+					<label class="card-label">
+						<input type="checkbox" class="card-input"/>
+						<div class="flip-card">
+							<div class="front">
+								<div class="card-img">
+									<img src="assets/img/main/greek-style-roast-fish.jpg" alt="" />
+								</div>
+								<h3>Greek style roast fish</h3>
+								<div class="front-characteristic">
+									<div class="front-characteristic__item">
+										<h4>Calories</h4>
+										<p>380 kcal</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Fats</h4>
+										<p>15g</p>
+									</div>
+									<div class="front-characteristic__item">
+										<h4>Protein</h4>
+										<p>44g</p>
+									</div>
+								</div>
+							</div>
+							<div class="back">
+								<h1>Greek style roast fish</h1>
+								<hr />
+								<p>Oven-bake white fish fillets with potatoes, tomatoes and 
+                                    herbs for a healthy and gluten-free weeknight dinner</p>
+								<hr />
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
 
         <div class="work">
             <div class="work-container">
                 <h1 class="work_title">How it works</h1>
                 <div class="work_inner">
                     <div class="choose">
-                        <img class="choose_img" src="img/choose.png" alt="">
+                        <img class="choose_img" src="assets/img/main/choose.png" alt="">
                         <div class="choose_text">
                             <h1 class="choose_text__title">Choose</h1>
                             <div class="choose_text__subtitle">Our dietian will help you with choosing!</div>
@@ -290,10 +371,10 @@
                                 developed by the chef special 
                                 for you.</div>
                         </div>
-                        <img class="preparing_img" src="img/preparing.png" alt="">
+                        <img class="preparing_img" src="assets/img/main/preparing.png" alt="">
                     </div>
                     <div class="delivery">
-                        <img class="delivery_img" src="img/delivery.png" alt="">
+                        <img class="delivery_img" src="assets/img/main/delivery.png" alt="">
                         <div class="deliver_text">
                             <h1 class="choose_text__title">Delivery</h1>
                             <div class="choose_text__subtitle">
@@ -309,11 +390,11 @@
         <div class="video">
             <div class="video_inner">
                 <h1 class="video_title">You can watch cooking process translation!</h1>
-                <a href="#" class="video_button">Play Video</a>
+                <a href="otherPage.html" class="video_button transition">Play Video</a>
             </div>
             <div class="video_block">
-                <div class="video_block__img"><img src="img/video.jpg" alt="" >
-                    <div class="video_block__button"><img src="img/video_button.png" alt=""></div>
+                <div class="video_block__img"><img src="assets/img/main/video.jpg" alt="" >
+                    <div class="video_block__button"><img src="assets/img/main/video_button.png" alt=""></div>
                 </div>
             </div>
         </div>
@@ -327,7 +408,7 @@
                         <button class="consultation-search-button" type="submit">Send</button>
                     </div>
                     <h2 class="consultation_inner__text">
-                        If you have questions, plese fill out the form and we will call you back!
+                        If you have questions, please fill out the form and we will call you back!
                     </h2>
                 </div>
                 <h1 class="consultation_second-title">
@@ -339,22 +420,22 @@
 
     <footer class="footer">
         <div class="footer-head">
-            <div class="footer__logo">
-                <img class="logo_img" src="img/healthyeats-logo.png" alt="">
+            <a href="./main.html" class="footer__logo transition">
+                <img class="logo_img" src="assets/img/main/healthyeats-logo.png" alt="">
                 <h1 class="logo_title">healthyeats</h1>
-            </div>
+            </a>
             <div class="social">
-                <a href="#" class="social__item">
+                <a href="https://facebook.com/" class="social__item transition">
                     <svg class="social__icon">
                         <use xlink:href="#facebook"></use>
                     </svg>
                 </a>
-                <a href="#" class="social__item">
+                <a href="https://www.instagram.com/" class="social__item transition">
                     <svg class="social__icon">
                         <use xlink:href="#instagram"></use>
                     </svg>
                 </a>
-                <a href="#" class="social__item">
+                <a href="https://twitter.com/" class="social__item transition">
                     <svg class="social__icon">
                         <use xlink:href="#twitter"></use>
                     </svg>
@@ -367,42 +448,42 @@
                 <h1 class="sitemap_title">Sitemap</h1>
                 <ul class="sitemap-list sitemap-list_left">
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">Main</a>
+                        <a class="sitemap-list__link transition" href="./main.html">Main</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">About us</a>
+                        <a class="sitemap-list__link transition" href="./about.html">About us</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">News</a>
+                        <a class="sitemap-list__link transition" href="#">News</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">Menu</a>
+                        <a class="sitemap-list__link transition" href="./menu.html">Menu</a>
                     </li>
                 </ul>
                 <ul class="sitemap-list sitemap-list_right">
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">FAQ</a>
+                        <a class="sitemap-list__link transition" href="./FAQ.html">FAQ</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">Contacts</a>
+                        <a class="sitemap-list__link transition" href="./contacts.html">Contacts</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">Privacy</a>
+                        <a class="sitemap-list__link transition" href="#">Privacy</a>
                     </li>
                     <li class="sitemap-list__item">
-                        <a class="sitemap-list__link" href="#">Terms</a>
+                        <a class="sitemap-list__link transition" href="#">Terms</a>
                     </li>
                 </ul>
             </div>
 
             <div class="contact">
                 <h1 class="contact_title">Contact us</h1>
-                <div class="contact_number">
+                <a class="contact_number" href="tel:+80000000">
                     <svg class="contact__icon">
                         <use xlink:href="#phone"></use>
                     </svg>
                     <h1 class="contact_text">8 000 00 00</h1>
-                </div>
+                </a>
                 <div class="work_time">
                     <svg class="work_time__icon">
                         <use xlink:href="#clock"></use>
@@ -424,10 +505,9 @@
             </div>
         </div>
     </footer>
-
-
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>
